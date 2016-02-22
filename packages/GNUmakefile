@@ -1,0 +1,16 @@
+
+SRC=contrib.c sockets.c develop.c math.c 
+OBJ=contrib.$(O) sockets.$(O) develop.$(O) math.$(O) 
+
+OBJ=$(addprefix $(OBJDIR)/,$(subst .c,.o,$(SRC)))
+
+$(OBJDIR)/%.o: %.c
+	$(CC) -I$(OBJDIR) -I.. $(CFLAGS) -o $@ -c $<
+
+all: $(OBJ)
+	ar rcu packages.$(A) $(OBJ)
+	$(RANLIB) packages.$(A)
+
+clean:
+	rm -f *.$(O)
+	rm -f packages.$(A)
