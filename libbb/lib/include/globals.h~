@@ -1,9 +1,0 @@
-#ifndef __GLOBALS_H__
-#define __GLOBALS_H__
-
-#define LOG_DIR 		"/log/"
-
-#define USER_OB			"/obj/user.c"
-
-#define CMD_D			"/adm/daemons/cmd_d.c"
-#endif

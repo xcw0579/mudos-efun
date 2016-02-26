@@ -1,9 +1,0 @@
-
-int main(object me, string arg)
-{
-	write(" --|--	test.c中main()被调用。\n");
-
-
-	write("in cmd test: arg="+arg+"\n");
-	return 1;
-}

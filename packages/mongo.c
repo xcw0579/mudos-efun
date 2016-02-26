@@ -105,21 +105,21 @@ f_testing (void)
 
 
 /* 参考：http://api.mongodb.org/c/current/mongoc_client_new.tml
- * 创建一个新的连接
+ * 创建一个新的连接，暂时是全局的。
  */
-/*
+
+#ifdef F_MONGOC_CLIENT_NEW
 void
 f_mongoc_client_new (void)	
 {
-*/
 	/*
 	 * 参数：1个  类型：string
+	 * 返回：无
 	 * */
-/*
     int num_arg = st_num_arg;	
-	svalue_t *arg;		
+	svalue_t *arg;	
 
-	if( num_arg==0 || num_arg>1 )	
+	if( num_arg!=1 )	
 	{
 		error("the argument is required。\n");
 	}
@@ -131,8 +131,7 @@ f_mongoc_client_new (void)
 	client=mongoc_client_new( sp->u.string );	
 	pop_n_elements( num_arg );	
 }
-
-*/
+#endif
 
 
 
