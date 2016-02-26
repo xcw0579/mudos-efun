@@ -2,7 +2,7 @@
 
 %ifdef GNU
 OBJ=$(addprefix $(OBJDIR)/,$(subst .c,.o,$(SRC)))
-LIBS=-I../libs -lmongoc-1.0 -lbson-1.0
+LIBS=-I../libs 
 
 
 $(OBJDIR)/%.o: %.c

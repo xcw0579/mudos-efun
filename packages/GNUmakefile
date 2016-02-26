@@ -3,7 +3,7 @@ SRC=contrib.c sockets.c mongo.c develop.c math.c
 OBJ=contrib.$(O) sockets.$(O) mongo.$(O) develop.$(O) math.$(O) 
 
 OBJ=$(addprefix $(OBJDIR)/,$(subst .c,.o,$(SRC)))
-LIBS=-I../libs -lmongoc-1.0 -lbson-1.0
+LIBS=-I../libs 
 
 
 $(OBJDIR)/%.o: %.c

@@ -5,47 +5,7 @@
  * 直接使用c driver的接口，只不过将一些基础类型有变动 
  * 只能有一个连接，这样就不用返回了。
  * */
-
-
-
-
-
-
-/*#include "mongo.h"*/
-/*
-#include "/home/xiao/libbson-1.0/bson.h"
-#include "/home/xiao/libbson-1.0/bcon.h"
-#include "/home/xiao/libmongoc-1.0/mongoc.h"
-#include "../libs/libbson/bson.h"
-#include "../libs/libbson/bcon.h"
-#include "../libs/libmongoc/mongoc.h"
-
-
-#include <bson.h>
-#include <bcon.h>
-#include <mongoc.h>
-*/
-
-#include "bson.h"
-#include "bcon.h"
-#include "mongoc.h"
-
-
-#include "../std.h"
-#include "../md.h"
-#include "../master.h"
-#include "../lpc_incl.h"
-#include "../mapping.h"
-#include "../comm.h"
-#include "../file_incl.h"
-#include "../file.h"
-#include "../object.h"
-#include "../eoperators.h"
-#include "../backend.h"
-#include "../swap.h"
-
-
-
+#include "mongo.h"
 
 
 
@@ -54,12 +14,18 @@ struct mongoc_client * client;		/* 全局的一个连接 */
 
 
 
+
+
+
+
+
+
 /*
  * 做一些初始化工作，包括调用mongoc_init()。
  * */
-#ifdef F_MONGOC_INIT_S
+#ifdef F_MONGOC_INIT
 void
-f_mongoc_init_s (void)
+f_mongoc_init (void)
 {
 	/*
 	 * 无参数，无返回
@@ -68,25 +34,24 @@ f_mongoc_init_s (void)
 	client=NULL;
 
 	mongoc_init();
-	mongoc_cleanup();
 }
 #endif
 /*
  * 做一些善后工作，包括调用mongoc_cleanup()
  * */
-#ifdef F_MONGOC_CLEANUP_S
+#ifdef F_MONGOC_CLEANUP
 void
-f_mongoc_cleanup_s (void)
+f_mongoc_cleanup (void)
 {
 	/*
 	 * 参数：1个  类型：string
 	 * */
-
+	//	write("我证明调用成功。");
 	if( client )
 	{
-		/*mongoc_client_destroy( client );*/
+		mongoc_client_destroy( client );
 	}
-	/*mongoc_cleanup();*/
+	mongoc_cleanup();
 }
 #endif
 

@@ -5,8 +5,8 @@
 
 
 
-	void mongoc_init_s( void );
-	void mongoc_cleanup_s( void ); 
+	void mongoc_init( void );
+	void mongoc_cleanup( void ); 
 /*	void mongoc_client_new( string );*/
 /*	void test( void ); */
 

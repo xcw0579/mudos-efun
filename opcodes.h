@@ -343,8 +343,8 @@
 #define F_SOCKET_ACQUIRE               327
 #define F_SOCKET_ADDRESS               328
 #define F_SOCKET_STATUS                329
-#define F_MONGOC_INIT_S                330
-#define F_MONGOC_CLEANUP_S             331
+#define F_MONGOC_INIT                  330
+#define F_MONGOC_CLEANUP               331
 #define F_DEBUG_INFO                   332
 #define F_DUMP_PROG                    333
 #define F_POW                          334
