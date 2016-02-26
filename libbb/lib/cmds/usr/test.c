@@ -2,7 +2,7 @@
 int main(object me, string arg)
 {
 
-	string str;
+	//string str;
 
 
 	//write( hello_world(25)+"\n" );
@@ -10,13 +10,17 @@ int main(object me, string arg)
 	write(" --|--	test.c中main()被调用。\n");
 
 
-
 	mongoc_init();
-	str=testing();
-	write("测试结果："+str);
-	mongoc_cleanup();
+	mongoc_client_new("mongodb://localhost:27017");
+	mongoc_client_new1();
+	//mongoc_client_get_database("db_name");
 	
-	// write("in cmd test: arg="+arg+"\n");
+	write("获取数据库完毕。\n");
+
+
+	//mongoc_database_destroy();
+	//mongoc_client_destroy();
+	mongoc_cleanup();
 
 	return 1;
 }

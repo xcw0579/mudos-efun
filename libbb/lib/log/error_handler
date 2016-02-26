@@ -8,3 +8,133 @@ Runtime Error at Fri Feb 26 10:18:29 2016:
 呼叫来自：/obj/user.c 的 cmd_hook() 第 40 行，物件： /obj/user#0
 呼叫来自：/adm/daemons/cmd_d.c 的 do_cmd() 第 15 行，物件： /adm/daemons/cmd_d
 
+Runtime Error at Fri Feb 26 17:20:01 2016:
+错误
+执行时段错误：*Error in loading object '/cmds/usr/test'
+
+程式：/adm/daemons/cmd_d.c 第 15 行
+物件: /adm/daemons/cmd_d
+对象：/obj/user#0
+呼叫来自：/obj/user.c 的 cmd_hook() 第 40 行，物件： /obj/user#0
+呼叫来自：/adm/daemons/cmd_d.c 的 do_cmd() 第 15 行，物件： /adm/daemons/cmd_d
+
+Runtime Error at Fri Feb 26 17:23:31 2016:
+错误
+执行时段错误：*Error in loading object '/cmds/usr/test'
+
+程式：/adm/daemons/cmd_d.c 第 15 行
+物件: /adm/daemons/cmd_d
+对象：/obj/user#0
+呼叫来自：/obj/user.c 的 cmd_hook() 第 40 行，物件： /obj/user#0
+呼叫来自：/adm/daemons/cmd_d.c 的 do_cmd() 第 15 行，物件： /adm/daemons/cmd_d
+
+Runtime Error at Fri Feb 26 17:25:13 2016:
+错误
+执行时段错误：*Error in loading object '/cmds/usr/test'
+
+程式：/adm/daemons/cmd_d.c 第 15 行
+物件: /adm/daemons/cmd_d
+对象：/obj/user#0
+呼叫来自：/obj/user.c 的 cmd_hook() 第 40 行，物件： /obj/user#0
+呼叫来自：/adm/daemons/cmd_d.c 的 do_cmd() 第 15 行，物件： /adm/daemons/cmd_d
+
+Runtime Error at Fri Feb 26 17:25:42 2016:
+错误
+执行时段错误：*Error in loading object '/cmds/usr/test'
+
+程式：/adm/daemons/cmd_d.c 第 15 行
+物件: /adm/daemons/cmd_d
+对象：/obj/user#0
+呼叫来自：/obj/user.c 的 cmd_hook() 第 40 行，物件： /obj/user#0
+呼叫来自：/adm/daemons/cmd_d.c 的 do_cmd() 第 15 行，物件： /adm/daemons/cmd_d
+
+Runtime Error at Fri Feb 26 17:26:16 2016:
+错误
+执行时段错误：*Error in loading object '/cmds/usr/test'
+
+程式：/adm/daemons/cmd_d.c 第 15 行
+物件: /adm/daemons/cmd_d
+对象：/obj/user#0
+呼叫来自：/obj/user.c 的 cmd_hook() 第 40 行，物件： /obj/user#0
+呼叫来自：/adm/daemons/cmd_d.c 的 do_cmd() 第 15 行，物件： /adm/daemons/cmd_d
+
+Runtime Error at Fri Feb 26 17:38:56 2016:
+错误
+执行时段错误：*Error in loading object '/cmds/usr/test'
+
+程式：/adm/daemons/cmd_d.c 第 15 行
+物件: /adm/daemons/cmd_d
+对象：/obj/user#0
+呼叫来自：/obj/user.c 的 cmd_hook() 第 40 行，物件： /obj/user#0
+呼叫来自：/adm/daemons/cmd_d.c 的 do_cmd() 第 15 行，物件： /adm/daemons/cmd_d
+
+Runtime Error at Fri Feb 26 17:43:45 2016:
+错误
+执行时段错误：*Error in loading object '/cmds/usr/test'
+
+程式：/adm/daemons/cmd_d.c 第 15 行
+物件: /adm/daemons/cmd_d
+对象：/obj/user#0
+呼叫来自：/obj/user.c 的 cmd_hook() 第 40 行，物件： /obj/user#0
+呼叫来自：/adm/daemons/cmd_d.c 的 do_cmd() 第 15 行，物件： /adm/daemons/cmd_d
+
+Runtime Error at Fri Feb 26 17:47:13 2016:
+错误
+执行时段错误：*Error in loading object '/cmds/usr/test'
+
+程式：/adm/daemons/cmd_d.c 第 15 行
+物件: /adm/daemons/cmd_d
+对象：/obj/user#0
+呼叫来自：/obj/user.c 的 cmd_hook() 第 40 行，物件： /obj/user#0
+呼叫来自：/adm/daemons/cmd_d.c 的 do_cmd() 第 15 行，物件： /adm/daemons/cmd_d
+
+Runtime Error at Fri Feb 26 17:50:30 2016:
+错误
+执行时段错误：*Error in loading object '/cmds/usr/test'
+
+程式：/adm/daemons/cmd_d.c 第 15 行
+物件: /adm/daemons/cmd_d
+对象：/obj/user#0
+呼叫来自：/obj/user.c 的 cmd_hook() 第 40 行，物件： /obj/user#0
+呼叫来自：/adm/daemons/cmd_d.c 的 do_cmd() 第 15 行，物件： /adm/daemons/cmd_d
+
+Runtime Error at Fri Feb 26 17:54:37 2016:
+错误
+执行时段错误：*Error in loading object '/cmds/usr/test'
+
+程式：/adm/daemons/cmd_d.c 第 15 行
+物件: /adm/daemons/cmd_d
+对象：/obj/user#0
+呼叫来自：/obj/user.c 的 cmd_hook() 第 40 行，物件： /obj/user#0
+呼叫来自：/adm/daemons/cmd_d.c 的 do_cmd() 第 15 行，物件： /adm/daemons/cmd_d
+
+Runtime Error at Fri Feb 26 18:14:19 2016:
+错误
+执行时段错误：*Error in loading object '/cmds/usr/test'
+
+程式：/adm/daemons/cmd_d.c 第 15 行
+物件: /adm/daemons/cmd_d
+对象：/obj/user#0
+呼叫来自：/obj/user.c 的 cmd_hook() 第 40 行，物件： /obj/user#0
+呼叫来自：/adm/daemons/cmd_d.c 的 do_cmd() 第 15 行，物件： /adm/daemons/cmd_d
+
+Runtime Error at Fri Feb 26 18:37:15 2016:
+错误
+执行时段错误：*Error in loading object '/cmds/usr/test'
+
+程式：/adm/daemons/cmd_d.c 第 15 行
+物件: /adm/daemons/cmd_d
+对象：/obj/user#0
+呼叫来自：/obj/user.c 的 cmd_hook() 第 40 行，物件： /obj/user#0
+呼叫来自：/adm/daemons/cmd_d.c 的 do_cmd() 第 15 行，物件： /adm/daemons/cmd_d
+
+Runtime Error at Fri Feb 26 18:38:53 2016:
+错误
+执行时段错误：*Error in loading object '/cmds/usr/test'
+
+程式：/adm/daemons/cmd_d.c 第 15 行
+物件: /adm/daemons/cmd_d
+对象：/obj/user#0
+呼叫来自：/obj/user.c 的 cmd_hook() 第 40 行，物件： /obj/user#0
+呼叫来自：/adm/daemons/cmd_d.c 的 do_cmd() 第 15 行，物件： /adm/daemons/cmd_d
+
