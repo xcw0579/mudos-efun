@@ -1729,7 +1729,7 @@ yyreturn:
 #line 234 "make_func.y" /* yacc.c:1906  */
 
 
-char *ctype P1(int, n)
+char *ctype (int  n)
 {
     static char buff[100];	/* 100 is such a comfortable size :-) */
     char *p = (char *)NULL;
@@ -1758,7 +1758,7 @@ char *ctype P1(int, n)
     return buff;
 }
 
-char *etype1 P1(int, n)
+char *etype1 (int  n)
 {
     if (n & 0x10000)
 	return "T_ARRAY";
@@ -1785,7 +1785,7 @@ char *etype1 P1(int, n)
     return "What?";
 }
 
-char *etype P1(int, n)
+char *etype (int  n)
 {
     int i;
     int local_size = 100;
@@ -1822,7 +1822,7 @@ char *etype P1(int, n)
     return buff;
 }
 
-int ident PROT((int));
+int ident (int);
 
 int yylex() {
     register int c;
@@ -1885,7 +1885,7 @@ int yylex() {
     }
 }
 
-int ident P1(int, c)
+int ident (int  c)
 {
     char buff[100];
     int len;

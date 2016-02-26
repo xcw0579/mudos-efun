@@ -99,7 +99,7 @@ int num_refs;
 /*
  * bison & yacc don't prototype this in y.tab.h
  */
-int yyparse PROT((void));
+int yyparse (void);
 
 
 #line 106 "grammar.tab.c" /* yacc.c:339  */
