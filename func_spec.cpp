@@ -636,6 +636,71 @@ mapping network_stats();
     string socket_address(int | object, int default: 0);
 # 26 "packages/sockets_spec.c"
     mixed *socket_status(void | int);
+# 1 "packages/mongo_spec.c"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 1 "/usr/include/stdc-predef.h" 1 3 4
+# 1 "<command-line>" 2
+# 1 "packages/mongo_spec.c"
+
+
+# 1 "./spec.h" 1
+
+
+
+
+# 1 "./std.h" 1
+
+
+
+
+
+
+# 1 "./arch.h" 1
+# 8 "./std.h" 2
+
+
+
+
+
+
+# 1 "./options_incl.h" 1
+# 1 "./options.h" 1
+# 1 "./options_incl.h" 2
+# 15 "./std.h" 2
+# 1 "./configure.h" 1
+# 16 "./std.h" 2
+
+
+
+
+
+
+
+# 1 "./portability.h" 1
+# 24 "./std.h" 2
+# 1 "./macros.h" 1
+# 131 "./macros.h"
+# 1 "./my_malloc.h" 1
+# 132 "./macros.h" 2
+# 25 "./std.h" 2
+
+
+
+
+
+
+
+# 1 "./debug.h" 1
+# 33 "./std.h" 2
+# 5 "./spec.h" 2
+# 4 "packages/mongo_spec.c" 2
+
+
+
+
+ void mongoc_init_s( void );
+ void mongoc_cleanup_s( void );
 # 1 "packages/develop_spec.c"
 # 1 "<built-in>"
 # 1 "<command-line>"

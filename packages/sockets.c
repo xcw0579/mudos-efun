@@ -29,7 +29,7 @@ f_socket_create PROT((void))
 
     arg = sp - num_arg + 1;
     if ((num_arg == 3) && !(arg[2].type & (T_STRING | T_FUNCTION))) {
-	bad_arg(3, F_SOCKET_CREATE);
+		bad_arg(3, F_SOCKET_CREATE);
     }
     if (check_valid_socket("create", -1, current_object, "N/A", -1)) {
 	if (num_arg == 2)
@@ -56,19 +56,19 @@ f_socket_bind PROT((void))
 
     arg = sp - num_arg + 1;
     if ((num_arg == 3) && (arg[2].type != T_STRING)) {
-	bad_arg(3, F_SOCKET_BIND);
+		bad_arg(3, F_SOCKET_BIND);
     }
 
     fd = arg[0].u.number;
     get_socket_address(fd, addr, &port, 0);
 
     if (VALID_SOCKET("bind")) {
-	i = socket_bind(fd, arg[1].u.number, (num_arg == 3 ? arg[2].u.string : 0));
-	pop_n_elems(num_arg - 1);
+		i = socket_bind(fd, arg[1].u.number, (num_arg == 3 ? arg[2].u.string : 0));
+		pop_n_elems(num_arg - 1);
         sp->u.number = i;
     } else {
-	pop_n_elems(num_arg - 1);
-	sp->u.number = EESECURITY;
+		pop_n_elems(num_arg - 1);
+		sp->u.number = EESECURITY;
     }
 }
 #endif
@@ -84,11 +84,11 @@ f_socket_listen PROT((void))
     get_socket_address(fd, addr, &port, 0);
 
     if (VALID_SOCKET("listen")) {
-	i = socket_listen(fd, sp);
-	pop_stack();
+		i = socket_listen(fd, sp);
+		pop_stack();
         sp->u.number = i;
     } else {
-	pop_stack();
+		pop_stack();
         sp->u.number = EESECURITY;
     }
 }

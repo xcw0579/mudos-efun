@@ -47,6 +47,13 @@
 
 OVERRIDES=$(MAKEOVERRIDES)
 
+
+
+# 下面的包是自定义的。
+SLIB= libs/libbson-1.0.a libs/libmongoc-1.0.a 
+
+
+
 # **************************************************************************
 # **** NOTE: If you add something here, also add it to the OBJ= rule below,
 # **** or non-GNU makes will die
@@ -179,7 +186,7 @@ grammar.tab.c: grammar.y
 %endif
 
 %ifdef GNU
-packages/packages.a: packages/parser.c packages/contrib.c
+packages/packages.a: packages/parser.c packages/contrib.c 
 	$(MAKE) -C packages 'CC=$(CC)' 'CFLAGS=$(CFLAGS) $(OPTIMIZE)' 'OBJDIR=../$(OBJDIR)' 'RANLIB=$(RANLIB)' 'A=$(A)' 'O=$(O)'
 
 mudlib/mudlib.a:
@@ -213,9 +220,9 @@ $(DRIVER_BIN).exe: packages/packages.lib mudlib/mudlib.lib $(OBJ)
 	$(CC) $(CFLAGS) $(OPTIMIZE) $(OBJ) -Fe$(DRIVER_BIN).exe packages/packages.lib mudlib/mudlib.lib \
 	$(EXTRALIBS) @system_libs
 %else
-$(DRIVER_BIN): packages/packages.a mudlib/mudlib.a $(OBJ)
+$(DRIVER_BIN): packages/packages.a mudlib/mudlib.a $(OBJ) $(SLIB)  
 	-mv -f $(DRIVER_BIN) $(DRIVER_BIN).old
-	$(PROOF) $(CC) $(CFLAGS) $(OPTIMIZE) $(OBJ) -o $(DRIVER_BIN) packages/packages.a mudlib/mudlib.a $(EXTRALIBS) `cat system_libs`
+	$(PROOF) $(CC) $(CFLAGS) $(OPTIMIZE) $(OBJ) -o $(DRIVER_BIN) packages/packages.a mudlib/mudlib.a  $(SLIB)  $(EXTRALIBS) `cat system_libs`
 %endif
 
 %ifdef GNU
@@ -234,8 +241,8 @@ addr_server.exe: $(OBJDIR)/addr_server.obj $(OBJDIR)/socket_ctrl.obj $(OBJDIR)/p
 	$(CC) $(CFLAGS) $(OPTIMIZE) $(OBJDIR)/socket_ctrl.obj $(OBJDIR)/addr_server.obj $(OBJDIR)/port.obj \
 	-Feaddr_server.exe @system_libs
 %else
-addr_server: files addr_server.o socket_ctrl.o port.o addr_server.h
-	$(CC) $(CFLAGS) $(OPTIMIZE) socket_ctrl.o addr_server.o port.o \
+addr_server: files addr_server.o socket_ctrl.o port.o addr_server.h 
+	$(CC) $(CFLAGS) $(OPTIMIZE) -lmongoc-1.0 -lbson-1.0 socket_ctrl.o addr_server.o port.o \
 	-o addr_server `cat system_libs`
 
 portbind: portbind.o

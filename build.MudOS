@@ -3,7 +3,7 @@
 if test $# -ne 0; then
     case $1 in
         develop)
-	    echo Preparing to build developmental version of MudOS driver ...
+	    echo Preparing to build developmental version of MudOS driver ... 指定版本
 	    OPTIMIZE="-Wall -Wundef -DPEDANTIC -pedantic -Wmissing-declarations"
 	    DEBUG="-g -DDEBUG -DDEBUG_MACRO"
             ;;
@@ -22,14 +22,14 @@ else
 fi
 
 # If this is uncommented, the specified 'make' is used instead of looking for
-# one 
-#MAKE=make
+# one 		使用make就行了
+MAKE=make
 
 # define this to be where you want the temporary compiled files to go
-# (only used with GNU make)
+# (only used with GNU make)   编译时产生的临时文件
 OBJDIR=obj
 
-# change this if you wish the driver binary to be named something else
+# change this if you wish the driver binary to be named something else 编译完driver的位置
 DRIVER_BIN=driver
 
 # uncomment PROOF if using CenterLine's TestCenter to debug the driver.
@@ -38,25 +38,26 @@ DRIVER_BIN=driver
 # Set INSTALL_DIR to the directory where you want to install the executables.
 INSTALL_DIR="../bin"
 
-#Enable warnings from the compiler (gcc), if wanted.
-#WARN=-Wall
+#Enable warnings from the compiler (gcc), if wanted.  显示警告
+# WARN=-Wall
  
 #Use this with gcc if you have lots of RAM, speeds up compile
 #PIPE=-pipe
 
-# define profiling if you want it
+# define profiling if you want it			不懂
 # note: the gmon.out file will likely be written in the mudlib dir.
 # PROFILE_ON controls whether or not monitoring is active at driver
 # startup.  Comment PROFILE_ON to make profiling not active at startup.
 # Use moncontrol(1) efun to enable profiling and moncontrol(0) to turn
 # it off.
 #PROFILE_ON="-DPROFILE_ON"
-# Uncomment this if you want to enable profiling of the driver (gcc)
+# Uncomment this if you want to enable profiling of the driver (gcc) 不懂
 #PROFIL="-pg -DPROFILING $(PROFILE_ON)"
  
-# Enable run time debugging
+# 调试相关
+# Enable run time debugging		启用运行时debug
 #DEBUG="-g"
-# With extra driver debug code
+# With extra driver debug code	插入额外的debug代码
 #DEBUG="-g -DDEBUG" 
 # For DEC Alpha: to have optimization and debugging
 #DEBUG="-g3 -DDEBUG"
@@ -65,7 +66,7 @@ INSTALL_DIR="../bin"
 # Compile in debug() macro code
 #DEBUG_MACRO="-DDEBUG_MACRO"
  
-# define this if you want to specify (compiler) optimization.
+# define this if you want to specify (compiler) optimization. 编译器优化
 # 
 # if nothing is defined here, and DEBUG is not defined, something appropriate
 # to the compiler in question is used.
@@ -76,7 +77,7 @@ INSTALL_DIR="../bin"
 #
 # Uncomment one or none of the following optimization lines.
 #
-# -O is usually a safe level of optimization for most compilers
+# -O is usually a safe level of optimization for most compilers 安全优化
 #OPTIMIZE="-O"
 # high optimization for gcc:
 #OPTIMIZE="-O2 -fstrength-reduce"
@@ -96,6 +97,7 @@ INSTALL_DIR="../bin"
 # high optimization for cc on SGI
 #OPTIMIZE="-O2 -Olimit 2500"
  
+# 系统相关的
 # System V Release 4 (386/486 or if using Sun's cc under Solaris 2.x)
 # ARCH: need a way to detect this
 #OSFLAGS=-DSVR4
@@ -116,6 +118,7 @@ INSTALL_DIR="../bin"
 # ARCH: *sigh* and this one ...
 #OSFLAGS=-DSCO
 
+# 注意点：如果出现set socket nonblocking
 # try uncommenting this if you are using gcc and at runtime you see socket
 # errors saying that the "set socket nonblocking" operation is not supported.
 # That error is caused by old-style macros (that gcc doesn't normally grok)
@@ -127,9 +130,9 @@ INSTALL_DIR="../bin"
 
 ####### END OF USER CONFIGURABLE OPTIONS
 
-echo "Trying out some stuff to see what works; ignore errors ..."
+echo "Trying out some stuff to see what works; ignore errors ... 试用一些东西看干了什么，忽略了什么"
 
-# Mac OS X needs this in order to build properly with gcc < 3
+# Mac OS X needs this in order to build properly with gcc < 3	苹果电脑兼容用的
 if test "`uname`" = "Darwin"; then
     GCC_MAJOR="`gcc -v 2>&1 | grep "gcc version" | cut -d ' ' -f 3 | cut -d '.' -f 1`"
     GCC_MINOR="`gcc -v 2>&1 | grep "gcc version" | cut -d ' ' -f 3 | cut -d '.' -f 2`"
@@ -139,7 +142,7 @@ if test "`uname`" = "Darwin"; then
 fi
 
 # 
-# Figure out what make is, and how to invoke it
+# Figure out what make is, and how to invoke it 计算使用哪个make，怎么触发
 # 
 if test "${MAKE-x}" = "x"; then
     gmake nothing
@@ -158,7 +161,7 @@ if test "${MAKE-x}" = "x"; then
 		OBJDIR=
             fi
         else
-            echo 'FATAL ERROR: Cannot find make or gmake'
+            echo 'FATAL ERROR: Cannot find make or gmake 连个合适的make工具都没有'
             exit
         fi
     fi
@@ -265,7 +268,7 @@ else
 fi
 
 #
-# Figure out what to use for install
+# Figure out what to use for install 配置用什么来下载
 #
 mkdir tmp
 cat >insttest <<END
@@ -311,7 +314,7 @@ else
 fi
 
 #
-# Find yacc/bison/byacc
+# Find yacc/bison/byacc		依赖的库？
 #
 cat >comptest.y <<END
 %token FOO
@@ -340,7 +343,7 @@ fi
 CFLAGS="$CCFLAGS $OSFLAGS $WARN $PROFIL $DEBUG $DEBUG_MACRO $DEBUG_NON_FATAL $STR $PIPE $NEED_OLD_CPP $EXPORT_DYNAMIC"
 
 #
-# Determine system type
+# Determine system type		判断系统类型
 #
 cat >comptest.c <<END
 #include <stdio.h>
@@ -382,7 +385,7 @@ case $ARCH in
 esac
 
 #
-# check for some missing functions
+# check for some missing functions		一些特殊的库函数看看有没有存在
 #
 rm a.out
 cat >comptest.c <<END
@@ -428,7 +431,7 @@ echo A=a >>Makefile.tmp
 echo O=o >>Makefile.tmp
 
 echo "***************** Configuration completed **************"
-echo "Installing MudOS on $ARCH"
+echo "Installing MudOS on $ARCH  下面是即将用于编译的选项"
 echo
 echo "Using $INSTALL to install binaries in $INSTALL_DIR."
 echo "Using $CPP for preprocessing."

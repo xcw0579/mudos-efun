@@ -343,10 +343,12 @@
 #define F_SOCKET_ACQUIRE               327
 #define F_SOCKET_ADDRESS               328
 #define F_SOCKET_STATUS                329
-#define F_DEBUG_INFO                   330
-#define F_DUMP_PROG                    331
-#define F_POW                          332
+#define F_MONGOC_INIT_S                330
+#define F_MONGOC_CLEANUP_S             331
+#define F_DEBUG_INFO                   332
+#define F_DUMP_PROG                    333
+#define F_POW                          334
 
 /* efuns */
-#define NUM_OPCODES 332
+#define NUM_OPCODES 334
 

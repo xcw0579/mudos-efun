@@ -221,6 +221,8 @@ func_t efun_table[] = {
 	f_socket_acquire,
 	f_socket_address,
 	f_socket_status,
+	f_mongoc_init_s,
+	f_mongoc_cleanup_s,
 	f_debug_info,
 	f_dump_prog,
 	f_pow,

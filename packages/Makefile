@@ -1,6 +1,6 @@
 
-SRC=contrib.c sockets.c develop.c math.c 
-OBJ=contrib.$(O) sockets.$(O) develop.$(O) math.$(O) 
+SRC=contrib.c sockets.c mongo.c develop.c math.c 
+OBJ=contrib.$(O) sockets.$(O) mongo.$(O) develop.$(O) math.$(O) 
 
 .c.$(O):
 	$(CC) $(CFLAGS) -I.. -c $*.c

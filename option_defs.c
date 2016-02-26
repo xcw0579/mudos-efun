@@ -40,6 +40,7 @@
   "__REF_RESERVED_WORD__", "",
   "__MESSAGE_BUFFER_SIZE__", "4096",
   "__STRIP_BEFORE_PROCESS_INPUT__", "",
+  "__PACKAGE_MONGO__", "",
   "__NEXT_MALLOC_DEBUG__", "",
   "__TRAP_CRASHES__", "",
   "__LARGEST_PRINTABLE_STRING__", "8192",
@@ -49,5 +50,5 @@
   "__NO_WIZARDS__", "",
 };
 
-#define NUM_OPTION_DEFS 48
+#define NUM_OPTION_DEFS 49
 

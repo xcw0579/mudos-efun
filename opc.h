@@ -218,6 +218,8 @@ opc_t opc_efun[] = {
 {"socket_acquire", 0},
 {"socket_address", 0},
 {"socket_status", 0},
+{"mongoc_init_s", 0},
+{"mongoc_cleanup_s", 0},
 {"debug_info", 0},
 {"dump_prog", 0},
 {"pow", 0},

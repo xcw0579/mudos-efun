@@ -1,11 +1,13 @@
 
-SRC=contrib.c sockets.c develop.c math.c 
-OBJ=contrib.$(O) sockets.$(O) develop.$(O) math.$(O) 
+SRC=contrib.c sockets.c mongo.c develop.c math.c 
+OBJ=contrib.$(O) sockets.$(O) mongo.$(O) develop.$(O) math.$(O) 
 
 OBJ=$(addprefix $(OBJDIR)/,$(subst .c,.o,$(SRC)))
+LIBS=-I../libs -lmongoc-1.0 -lbson-1.0
+
 
 $(OBJDIR)/%.o: %.c
-	$(CC) -I$(OBJDIR) -I.. $(CFLAGS) -o $@ -c $<
+	gcc -I$(OBJDIR) -I.. $(LIBS)   -o $@ -c $<
 
 all: $(OBJ)
 	ar rcu packages.$(A) $(OBJ)

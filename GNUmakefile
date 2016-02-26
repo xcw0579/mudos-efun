@@ -57,7 +57,7 @@ O=o
 # Note: linking with MallocDebug will cause the virtual size of the
 # driver process to reach appoximately 40MB however the amount of real memory
 # used will remain close to normal.
-#EXTRALIBS=-lMallocDebug -lsys_s
+EXTRALIBS=-lbson-1.0 -lmongoc-1.0
 #
 # ---- DO NOT EDIT ANYTHING BELOW HERE UNLESS YOU KNOW ALOT ABOUT HOW
 #      MUDOS WORKS INTERNALLY ----
@@ -78,6 +78,9 @@ SRC=grammar.tab.c lex.c main.c rc.c interpret.c simulate.c file.c object.c \
   disassembler.c binaries.c ualarm.c $(STRFUNCS) \
   replace_program.c ccode.c cfuns.c compile_file.c master.c function.c \
   debug.c crypt.c applies_table.c add_action.c
+
+#LIB=libs/libmongoc-1.0.a libs/libbson-1.0.a libs/libssl.a -lmongoc-1.0 -lbson-1.0 --allow-shlib-undefined 
+
 
 all: $(OBJDIR) cc.h files main_build
 
@@ -117,7 +120,7 @@ mudlib/mudlib.a:
 	$(MAKE) -C mudlib 'CC=$(CC)' 'CFLAGS=$(CFLAGS) $(OPTIMIZE)' 'OBJDIR=../$(OBJDIR)' 'RANLIB=$(RANLIB)' 'A=$(A)' 'O=$(O)'
 $(DRIVER_BIN): packages/packages.a mudlib/mudlib.a $(OBJ)
 	-mv -f $(DRIVER_BIN) $(DRIVER_BIN).old
-	$(PROOF) $(CC) $(CFLAGS) $(OPTIMIZE) $(OBJ) -o $(DRIVER_BIN) packages/packages.a mudlib/mudlib.a $(EXTRALIBS) `cat system_libs`
+	$(PROOF) $(CC) $(CFLAGS) $(OPTIMIZE) $(OBJ) -o $(DRIVER_BIN) packages/packages.a mudlib/mudlib.a $(LIB) $(EXTRALIBS) `cat system_libs`
 
 addr_server: files $(OBJDIR)/addr_server.o $(OBJDIR)/socket_ctrl.o $(OBJDIR)/port.o addr_server.h
 	$(CC) $(CFLAGS) $(OPTIMIZE) $(OBJDIR)/socket_ctrl.o $(OBJDIR)/addr_server.o $(OBJDIR)/port.o \

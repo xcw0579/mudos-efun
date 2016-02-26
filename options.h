@@ -584,6 +584,23 @@
  * and the efuns in packages/xyzzy_spec.c will be added to the driver.      *
  ****************************************************************************/
 
+
+/* 自定义efun测试 */
+/*#define PACKAGE_MONGO*/
+
+#undef PACKAGE_MYEFUN
+#define PACKAGE_MONGO
+
+
+
+
+
+
+
+
+
+
+
 /* various miscellaneous efuns */
 #define PACKAGE_CONTRIB
 
