@@ -1,0 +1,41 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CMD_D	include/globals.h	9;"	d
+F_DBASE	include/globals.h	12;"	d
+F_DBASE	obj/user.c	/^inherit F_DBASE;	\/\/ 这是个mapping，用于存储用户的数据$/;"	v
+LOGIN_D	include/globals.h	10;"	d
+LOG_DIR	include/globals.h	5;"	d
+USER_OB	include/globals.h	7;"	d
+__GLOBALS_H__	include/globals.h	2;"	d
+assure_file	adm/obj/simul_efun.c	/^void assure_file(string file)$/;"	f
+base_name	adm/obj/simul_efun.c	/^string base_name(object ob)$/;"	f
+cmd_hook	obj/user.c	/^int cmd_hook(string arg)$/;"	f
+connect	adm/obj/master.c	/^object connect()$/;"	f
+crash	adm/obj/master.c	/^void crash(string error, object command_giver, object current_object)$/;"	f
+create	adm/daemons/cmd_d.c	/^void create()$/;"	f
+create	adm/obj/master.c	/^void create()$/;"	f
+create	obj/user.c	/^void create()$/;"	f
+creator_file	adm/obj/master.c	/^string creator_file()$/;"	f
+dbase	std/body/user_dbase.c	/^mapping dbase = ([]);$/;"	v
+delete	std/body/user_dbase.c	/^void delete(mixed prop)$/;"	f
+do_cmd	adm/daemons/cmd_d.c	/^int do_cmd(object me, string verb, string arg)$/;"	f
+enter_world	adm/daemons/login_d.c	/^void enter_world(object ob)$/;"	f
+epilog	adm/obj/master.c	/^string *epilog(int load_empty)$/;"	f
+error_handler	adm/obj/master.c	/^void error_handler(mapping error, int caught)$/;"	f
+get_bb_uid	adm/obj/master.c	/^string get_bb_uid()$/;"	f
+get_id	adm/daemons/login_d.c	/^void get_id(string arg,object ob)$/;"	f
+get_root_uid	adm/obj/master.c	/^string get_root_uid()$/;"	f
+log_error	adm/obj/master.c	/^void log_error(string file, string message)$/;"	f
+log_file	adm/obj/simul_efun.c	/^void log_file(string file, string arg)$/;"	f
+login_timeout	obj/user.c	/^void login_timeout()$/;"	f
+logon	adm/daemons/login_d.c	/^void logon(object ob)$/;"	f
+logon	obj/user.c	/^void logon()$/;"	f
+main	cmds/usr/test.c	/^int main(object me, string arg)$/;"	f
+preload	adm/obj/master.c	/^void preload(string file)$/;"	f
+query	std/body/user_dbase.c	/^mixed query(mixed prop)$/;"	f
+set	std/body/user_dbase.c	/^mixed set(mixed prop,mixed data)$/;"	f
+setup	obj/user.c	/^int setup()$/;"	f

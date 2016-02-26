@@ -1,0 +1,1014 @@
+cscope 15 $HOME/libbb/lib -q 0000000089 0000005967
+	@adm/daemons/cmd_d.c
+
+3 
+	$ü—‹
+()
+
+5 
+	`wr™e
+(" --|-- cmd_d.cä¸­create()è¢«è°ƒç”¨ã€‚\n");
+
+8 
+	}
+}
+
+10 
+	$do_cmd
+(
+objeù
+ 
+me
+, 
+¡ršg
+ 
+v”b
+, sŒšg 
+¬g
+)
+
+12 
+	`wr™e
+(" --|-- cmd_d.cä¸­do_cmd()è¢«è°ƒç”¨ã€‚\n");
+
+15  ("/cmds/u¤/"+
+v”b
+)->
+	`maš
+(
+me
+, 
+¬g
+);
+
+16 
+	}
+}
+
+	@adm/daemons/login_d.c
+
+5 
+g‘_id
+(
+¡ršg
+ 
+¬g
+,
+objeù
+ 
+ob
+);
+
+13 
+	$’‹r_wÜld
+(
+objeù
+ 
+ob
+)
+
+15 
+	`wr™e
+(" --|--†ogin_d.cä¸­çš„enter_world()è¢«è°ƒç”¨ã€‚\n");
+
+18 
+ob
+->
+	`d–‘e
+("login_temp");
+
+19 
+ob
+->
+	`£tup
+();
+
+20 
+	}
+}
+
+22 
+	$logÚ
+(
+objeù
+ 
+ob
+)
+
+24 
+	`wr™e
+(" --|--†ogin_d.cä¸­çš„logon()è¢«è°ƒç”¨ã€‚\n");
+
+26 
+	`wr™e
+("Welcomeo my New mudlib\n");
+
+27 
+	`šput_to
+("g‘_id", 
+ob
+);
+
+28 
+	}
+}
+
+31 
+	$g‘_id
+(
+¡ršg
+ 
+¬g
+,
+objeù
+ 
+ob
+)
+
+33 
+	`wr™e
+(" --|--†ogin_d.cä¸­çš„get_id()è¢«è°ƒç”¨ã€‚\n");
+
+35 
+ob
+->
+	`£t
+("id", 
+¬g
+);
+
+36 
+	`’‹r_wÜld
+(
+ob
+);
+
+37 
+	}
+}
+
+	@adm/obj/master.c
+
+14 
+	$ü—‹
+()
+
+16 
+	`wr™e
+(" --|-- master.cä¸­çš„create()è¢«è°ƒç”¨ã€‚\n");
+
+19 
+	}
+}
+
+27 
+	$üash
+(
+¡ršg
+ 
+”rÜ
+, 
+objeù
+ 
+commªd_giv”
+, objeù 
+cu¼’t_objeù
+)
+
+29 
+i
+, 
+kk
+, 
+ii
+, 
+size
+;
+
+30 
+objeù
+ 
+ob
+;
+
+31 
+mixed
+ 
+u£¾i¡
+, 
+³ts
+;
+
+32 
+mixed
+ 
+sql_¡r
+, 
+fe
+;
+
+34 
+	`wr™e
+(" --|-- master.cä¸­çš„crash()è¢«è°ƒç”¨ã€‚\n");
+
+37 
+	`assu»_fe
+("/log/CRASH");
+
+38 
+	`wr™e_fe
+("/log/CRASH", 
+	`¥rštf
+("%s:Driv” c¿shed.\Ã¼Ü=%s\ncommªd_giv”=%O\ncu¼’t_objeù=%O\n\n", 
+	`ùime
+(
+	`time
+()), 
+”rÜ
+, 
+commªd_giv”
+, 
+cu¼’t_objeù
+));
+
+41 
+	}
+}
+
+45 
+	$log_”rÜ
+(
+¡ršg
+ 
+fe
+, sŒšg 
+mes§ge
+)
+
+47 
+	`wr™e
+(" --|-- master.cä¸­çš„log_error()è¢«è°ƒç”¨ã€‚\n");
+
+50 
+	`ÿtch
+(
+	`wr™e_fe
+("/log/LOG", 
+	`¥rštf
+("%s:%s\n%s\n\n", 
+	`ùime
+(
+	`time
+()), 
+fe
+, 
+mes§ge
+)));
+
+52 
+	}
+}
+
+58 
+	$”rÜ_hªdËr
+(
+m­pšg
+ 
+”rÜ
+, 
+ÿught
+)
+
+60 
+i
+, 
+s
+;
+
+61 
+¡ršg
+ 
+»s
+;
+
+62 
+mixed
+ 
+Œaû
+, 
+tmp
+;
+
+64 
+	`wr™e
+(" --|-- master.cä¸­çš„error_handler()è¢«è°ƒç”¨ã€‚\n");
+
+67 ià(!
+	`m­p
+(
+”rÜ
+))
+
+70 
+	`log_fe
+("”rÜ_hªdËr", 
+	`¥rštf
+("RuÁimE¼Ü‡ˆ%s:\n", 
+	`ùime
+(
+	`time
+())));
+
+71 
+»s
+ = (
+ÿught
+) ? "é”™è¯¯è®¯æ¯è¢«æ‹¦æˆª: " : "é”™è¯¯";
+
+72 
+»s
+ = 
+	`¥rštf
+("%s\næ‰§è¡Œæ—¶æ®µé”™è¯¯ï¼š%s\nç¨‹å¼ï¼š%s ç¬¬ %i è¡Œ\nç‰©ä»¶: %O\nå¯¹è±¡ï¼š%O\n",
+
+73 
+»s
+,
+
+74 
+”rÜ
+["error"],
+
+75 
+”rÜ
+["program"],
+
+76 
+”rÜ
+["line"],
+
+77 
+”rÜ
+["object"],
+
+78 
+	`this_¶ay”
+()
+
+81 
+i
+=0, 
+s
+ = (
+”rÜ
+["trace"]); i < s; i++)
+
+82 
+»s
+ = 
+	`¥rštf
+("%så‘¼å«æ¥è‡ªï¼š%s çš„ %s() ç¬¬ %i è¡Œï¼Œç‰©ä»¶ï¼š %O\n",
+
+83 
+»s
+,
+
+84 
+”rÜ
+["Œaû"][
+i
+]["program"],
+
+85 
+”rÜ
+["Œaû"][
+i
+]["function"],
+
+86 
+”rÜ
+["Œaû"][
+i
+]["line"],
+
+87 
+”rÜ
+["Œaû"][
+i
+]["object"]
+
+90 
+	`log_fe
+("”rÜ_hªdËr", 
+»s
+ + "\n");
+
+93 
+	}
+}
+
+99 
+¡ršg
+ 
+	$g‘_roÙ_uid
+()
+
+102 
+	`wr™e
+(" --|-- master.cä¸­çš„get_root_uid()è¢«è°ƒç”¨ã€‚\n");
+
+104 
+	}
+}
+
+110 
+¡ršg
+ 
+	$g‘_bb_uid
+()
+
+113 
+	`wr™e
+(" --|-- master.cä¸­çš„get_bb_uid()è¢«è°ƒç”¨ã€‚\n");
+
+115 
+	}
+}
+
+124 
+objeù
+ 
+	$cÚÃù
+()
+
+126 
+	`wr™e
+(" --|-- master.cä¸­çš„connect()è¢«è°ƒç”¨ã€‚\n");
+
+128 
+	`log_fe
+("Ãw_u£r_logš", 
+	`time
+()+"\n");
+
+129  
+	`Ãw
+("/obj/user.c");
+
+130 
+	}
+}
+
+133 
+¡ršg
+ 
+	$ü—tÜ_fe
+()
+
+135 
+	`wr™e
+(" --|-- master.cä¸­çš„creator_file()è¢«è°ƒç”¨ã€‚\n");
+
+138 
+	}
+}
+
+144 
+¡ršg
+ *
+	$•og
+(
+lßd_em±y
+)
+
+146 
+	`wr™e
+(" --|-- master.cä¸­çš„epilog()è¢«è°ƒç”¨ã€‚\n\n");
+
+149 
+	}
+}
+
+153 
+	$´–ßd
+(
+¡ršg
+ 
+fe
+)
+
+156 
+¡ršg
+ 
+”r
+, 
+¡r
+;
+
+157 
+	`wr™e
+(" --|-- master.cä¸­çš„preload()è¢«è°ƒç”¨ã€‚\n");
+
+160 ià(
+	`fe_size
+(
+fe
+) == -1)
+
+163 
+”r
+ = 
+	`ÿtch
+(
+	`lßd_objeù
+(
+fe
+));
+
+165 ià(
+”r
+)
+
+166 
+¡r
+ = 
+	`¥rštf
+("é¢„è½½å…¥ï¼š%så‘ç”Ÿé”™è¯¯ï¼š%sã€‚\n", 
+fe
+, 
+”r
+);
+
+168 
+¡r
+ = 
+	`¥rštf
+("é¢„è½½å…¥ï¼š%sæˆåŠŸã€‚\n", 
+fe
+);
+
+170 
+	`wr™e
+(
+¡r
+);
+
+172 
+	}
+}
+
+	@adm/obj/simul_efun.c
+
+3 
+	~<glob®s.h
+>
+
+7 
+	$assu»_fe
+(
+¡ršg
+ 
+fe
+)
+
+9 
+i
+, 
+j
+;
+
+10 
+¡ršg
+ 
+·th
+, *
+dœ
+;
+
+11 
+	`wr™e
+(" --|-- simul_efun.cä¸­çš„assure_file()è¢«è°ƒç”¨ã€‚\n");
+
+15 ià(
+	`fe_size
+(
+fe
+) != -1)
+
+18 
+dœ
+ = 
+	`ex¶ode
+(
+fe
+, "/");
+
+19 
+dœ
+ = dir[0..(dir) - 2];
+
+20 
+·th
+ = "/";
+
+22  
+i
+ = 0, 
+j
+ = (
+dœ
+); i < j; i++)
+
+24 
+·th
+ +ğ
+dœ
+[
+i
+];
+
+25 
+	`mkdœ
+(
+·th
+);
+
+26 
+·th
+ += "/";
+
+29 
+	}
+}
+
+31 
+	$log_fe
+(
+¡ršg
+ 
+fe
+, sŒšg 
+¬g
+)
+
+33 
+	`wr™e
+(" --|-- simul_efun.cä¸­çš„log_file()è¢«è°ƒç”¨ã€‚\n");
+
+36 
+	`ÿtch
+(
+	`assu»_fe
+(
+LOG_DIR
++
+fe
+));
+
+37 
+	`ÿtch
+(
+	`wr™e_fe
+(
+LOG_DIR
++
+fe
+, 
+¬g
+));
+
+39 
+	}
+}
+
+41 
+¡ršg
+ 
+	$ba£_Çme
+(
+objeù
+ 
+ob
+)
+
+43 
+	`wr™e
+(" --|-- simul_efun.cä¸­çš„base_name()è¢«è°ƒç”¨ã€‚\n");
+
+46  
+	`ex¶ode
+(
+	`fe_Çme
+(
+ob
+), "#")[0];
+
+47 
+	}
+}
+
+	@cmds/usr/test.c
+
+2 
+	$maš
+(
+objeù
+ 
+me
+, 
+¡ršg
+ 
+¬g
+)
+
+4 
+	`wr™e
+(" --|--est.cä¸­main()è¢«è°ƒç”¨ã€‚\n");
+
+7 
+	`wr™e
+("š cmde¡:‡rg="+
+¬g
++"\n");
+
+9 
+	}
+}
+
+	@include/globals.h
+
+1 #iâdeà
+__GLOBALS_H__
+
+
+2 
+	#__GLOBALS_H__
+
+
+	)
+
+5 
+	#LOG_DIR
+ "/log/"
+
+	)
+
+7 
+	#USER_OB
+ "/obj/u£r.c"
+
+	)
+
+9 
+	#CMD_D
+ "/adm/d«mÚs/cmd_d.c"
+
+	)
+
+10 
+	#LOGIN_D
+ "/adm/d«mÚs/logš_d.c"
+
+	)
+
+12 
+	#F_DBASE
+ "/¡d/body/u£r_dba£.c"
+
+	)
+
+	@obj/user.c
+
+3 
+šh”™
+ 
+	gF_DBASE
+;
+
+4 
+£tup
+();
+
+7 
+	$ü—‹
+()
+
+9 
+	`wr™e
+(" --|-- user.cä¸­çš„create()è¢«è°ƒç”¨ã€‚\n");
+
+12 
+	}
+}
+
+17 
+	$£tup
+()
+
+19 
+	`wr™e
+(" --|-- user.cä¸­set_up()è¢«è°ƒç”¨ã€‚\n");
+
+22 
+	`log_fe
+("u£r", 
+	`¥rštf
+("%O s‘u°© %s\n", 
+	`this_objeù
+(), 
+	`ùime
+(
+	`time
+())));
+
+23 
+	`£t_livšg_Çme
+Ğ
+	`qu”y
+("id") );
+
+24 
+	`’abË_commªds
+();
+
+25 
+	`add_aùiÚ
+("cmd_hook", "", 1);
+
+28 
+	}
+}
+
+33 
+	$cmd_hook
+(
+¡ršg
+ 
+¬g
+)
+
+35 
+¡ršg
+ 
+v”b
+ = 
+	`qu”y_v”b
+();
+
+37 
+	`wr™e
+(" --|-- user.cä¸­çš„cmd_hook()è¢«è°ƒç”¨ã€‚\n");
+
+40  
+CMD_D
+->
+	`do_cmd
+(
+	`this_objeù
+(), 
+v”b
+, 
+¬g
+);
+
+41 
+	}
+}
+
+46 
+	$logÚ
+()
+
+48 
+	`wr™e
+(" --|-- user.cä¸­çš„logon()è¢«è°ƒç”¨ã€‚\n");
+
+50 
+	`ÿÎ_out
+("login_timeout", 1);
+
+51 
+	`£t
+("login_temp", 1);
+
+52 
+LOGIN_D
+->
+	`logÚ
+(
+	`this_objeù
+());
+
+53 
+	}
+}
+
+57 
+	$logš_timeout
+()
+
+59 
+	`wr™e
+(" --|-- user.cä¸­çš„login_timeout()è¢«è°ƒç”¨ã€‚\n");
+
+61 ifĞ
+	`qu”y
+("login_temp") )
+
+62 
+	`de¡ruù
+Ğ
+	`this_objeù
+() );
+
+64 
+	}
+}
+
+	@std/body/user_dbase.c
+
+5 
+m­pšg
+ 
+	gdba£
+ = ([]);
+
+7 
+mixed
+ 
+	$£t
+(
+mixed
+ 
+´İ
+,mixed 
+d©a
+)
+
+9  
+dba£
+[
+´İ
+] = 
+d©a
+;
+
+10 
+	}
+}
+
+12 
+mixed
+ 
+	$qu”y
+(
+mixed
+ 
+´İ
+)
+
+14  
+dba£
+[
+´İ
+];
+
+15 
+	}
+}
+
+17 
+	$d–‘e
+(
+mixed
+ 
+´İ
+)
+
+19 
+	`m­_d–‘e
+(
+dba£
+,
+´İ
+);
+
+20 
+	}
+}
+
+	@
+1
+.
+1
+/usr/include
+8
+147
+adm/daemons/cmd_d.c
+adm/daemons/login_d.c
+adm/obj/master.c
+adm/obj/simul_efun.c
+cmds/usr/test.c
+include/globals.h
+obj/user.c
+std/body/user_dbase.c

@@ -345,10 +345,11 @@
 #define F_SOCKET_STATUS                329
 #define F_MONGOC_INIT                  330
 #define F_MONGOC_CLEANUP               331
-#define F_DEBUG_INFO                   332
-#define F_DUMP_PROG                    333
-#define F_POW                          334
+#define F_TESTING                      332
+#define F_DEBUG_INFO                   333
+#define F_DUMP_PROG                    334
+#define F_POW                          335
 
 /* efuns */
-#define NUM_OPCODES 334
+#define NUM_OPCODES 335
 

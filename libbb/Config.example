@@ -27,7 +27,7 @@ address server ip : localhost
 address server port : 9997
 
 # absolute pathname of mudlib
-mudlib directory : /home/xiao/v22/libbb/lib
+mudlib directory : /home/xiao/libbb/lib
 
 # absolute pathname of driver/config dir
 binary directory : /home/xiao/v22/bin/

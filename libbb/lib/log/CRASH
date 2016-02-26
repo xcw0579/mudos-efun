@@ -1,0 +1,35 @@
+Fri Feb 26 10:18:29 2016:Driver crashed.
+error=Process interrupted
+command_giver=0
+current_object=0
+
+Fri Feb 26 10:21:33 2016:Driver crashed.
+error=Process interrupted
+command_giver=0
+current_object=0
+
+Fri Feb 26 11:24:32 2016:Driver crashed.
+error=Process interrupted
+command_giver=0
+current_object=0
+
+Fri Feb 26 12:45:17 2016:Driver crashed.
+error=Aborted(IOT)
+command_giver=/obj/user#0
+current_object=/cmds/usr/test
+
+Fri Feb 26 12:45:40 2016:Driver crashed.
+error=Aborted(IOT)
+command_giver=/obj/user#0
+current_object=/cmds/usr/test
+
+Fri Feb 26 14:11:32 2016:Driver crashed.
+error=Process interrupted
+command_giver=0
+current_object=0
+
+Fri Feb 26 14:20:29 2016:Driver crashed.
+error=Process interrupted
+command_giver=0
+current_object=0
+

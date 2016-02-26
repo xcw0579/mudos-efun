@@ -9,7 +9,7 @@
 
 
 
-struct mongoc_client * client;		/* 全局的一个连接 */
+mongoc_client_t * client;		/* 全局的一个连接 */
 
 
 
@@ -56,6 +56,54 @@ f_mongoc_cleanup (void)
 #endif
 
 
+
+
+
+#ifdef F_TESTING
+void
+f_testing (void)
+{
+	mongoc_database_t    *database;
+	mongoc_collection_t  *collection;
+	bson_t               *command, reply;
+	bson_error_t          error;
+
+	char	*str;
+	bool	retval;
+	client=mongoc_client_new("mongodb://localhost:27017");
+	database = mongoc_client_get_database (client, "db_name");	//连接数据库
+	collection = mongoc_client_get_collection (client, "db_name", "coll_name");// 获取集合 
+	
+	command = BCON_NEW ("ping", BCON_INT32 (1));
+	retval = mongoc_client_command_simple (client, "another", command, NULL, &reply, &error); 
+
+	if (!retval) {
+		//fprintf (stderr, "%s\n", error.message); 
+		str="wrong op。";
+		copy_and_push_string(str);
+
+		mongoc_collection_destroy(collection);
+		mongoc_database_destroy(database);
+		
+		return ;
+	}
+
+	str = bson_as_json (&reply, NULL);	//将command的结果，bson转成json，之后就变成string可以输出
+	copy_and_push_string(str);
+
+	mongoc_collection_destroy(collection);
+	mongoc_database_destroy(database);
+	
+	bson_destroy (&reply);
+	bson_destroy (command);
+	bson_free (str);
+
+}
+#endif
+
+
+
+
 /* 参考：http://api.mongodb.org/c/current/mongoc_client_new.tml
  * 创建一个新的连接
  */
@@ -83,39 +131,6 @@ f_mongoc_client_new (void)
 	client=mongoc_client_new( sp->u.string );	
 	pop_n_elements( num_arg );	
 }
-
-*/
-
-/*
-void
-f_test (void)
-{
-	mongoc_database_t    *database;
-	mongoc_collection_t  *collection;
-	bson_t               *command, reply;
-	bson_error_t          error;
-	char                 *str;
-	bool                  retval;
-
-	database = mongoc_client_get_database (client, "db_name");
-	collection = mongoc_client_get_collection (client, "db_name", "coll_name");
-
-	command = BCON_NEW ("ping", BCON_INT32 (1));	//这是bson对象。
-	retval = mongoc_client_command_simple (client, "another", command, NULL, &reply, &error);
-
-	if (!retval) {
-		fprintf (stderr, "%s\n", error.message); 
-		return EXIT_FAILURE;
-	}
-
-	str = bson_as_json (&reply, NULL);	//将command的结果，bson转成json，之后就变成string可以输出
-	printf ("%s\n", str);
-
-	return ;
-}
-
-
-
 
 */
 

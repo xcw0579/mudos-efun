@@ -220,6 +220,7 @@ opc_t opc_efun[] = {
 {"socket_status", 0},
 {"mongoc_init", 0},
 {"mongoc_cleanup", 0},
+{"testing", 0},
 {"debug_info", 0},
 {"dump_prog", 0},
 {"pow", 0},

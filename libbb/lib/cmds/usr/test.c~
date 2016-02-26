@@ -1,0 +1,15 @@
+
+int main(object me, string arg)
+{
+
+	write( hello_world(25)+"\n" );
+	
+	write(" --|--	test.c中main()被调用。\n");
+	mongoc_init_s();
+	mongoc_cleanup_s();
+	//write( str+"\n");
+	
+	// write("in cmd test: arg="+arg+"\n");
+
+	return 1;
+}

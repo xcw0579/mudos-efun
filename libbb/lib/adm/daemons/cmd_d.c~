@@ -1,0 +1,15 @@
+void create()
+{
+	write(" --|--	cmd_d.c中create()被调用。\n");
+
+	return ;
+}
+
+int do_cmd(object me,string verb,string arg)
+{
+
+	write(" --|--	cmd_d.c中do_cmd()被调用。\n");
+
+
+	return ("/cmds/usr/"+verb)->main(me,arg);
+}

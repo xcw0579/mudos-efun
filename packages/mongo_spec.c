@@ -8,7 +8,9 @@
 	void mongoc_init( void );
 	void mongoc_cleanup( void ); 
 /*	void mongoc_client_new( string );*/
-/*	void test( void ); */
+	string testing( void ); 	
+//	void testing( void );
+	
 
 
 

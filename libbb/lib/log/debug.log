@@ -1,0 +1,23 @@
+----------------------------------------------------------------------------
+testsuite (MudOS v22.2b14) starting up on Linux - Fri Feb 26 14:20:29 2016
+
+
+Connected to address server on localhost port 9997
+/adm/obj/master.c line 41: Warning: Unused local variable 'i' before 
+/adm/obj/master.c line 41: Warning: Unused local variable 'kk' before 
+/adm/obj/master.c line 41: Warning: Unused local variable 'ii' before 
+/adm/obj/master.c line 41: Warning: Unused local variable 'size' before 
+/adm/obj/master.c line 41: Warning: Unused local variable 'ob' before 
+/adm/obj/master.c line 41: Warning: Unused local variable 'userlist' before 
+/adm/obj/master.c line 41: Warning: Unused local variable 'pets' before 
+/adm/obj/master.c line 41: Warning: Unused local variable 'sql_str' before 
+/adm/obj/master.c line 41: Warning: Unused local variable 'file' before 
+/adm/obj/master.c line 93: Warning: Unused local variable 'trace' before 
+/adm/obj/master.c line 93: Warning: Unused local variable 'tmp' before 
+Initializations complete.
+
+Accepting connections on port 4000.
+Accepting connections on port 4001.
+******** FATAL ERROR: Process interrupted
+MudOS driver attempting to exit gracefully.
+crash() in master called successfully.  Aborting.

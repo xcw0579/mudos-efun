@@ -216,6 +216,7 @@ void f_socket_address PROT((void));
 void f_socket_status PROT((void));
 void f_mongoc_init PROT((void));
 void f_mongoc_cleanup PROT((void));
+void f_testing PROT((void));
 void f_debug_info PROT((void));
 void f_dump_prog PROT((void));
 void f_pow PROT((void));

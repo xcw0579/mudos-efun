@@ -1,0 +1,36 @@
+// logind
+// create by akuma@mud.com.cn
+// 2009-10-04
+
+void gt_id(string arg,object ob);
+
+
+
+
+
+
+
+void enter_world(object ob)
+{	
+	write(" --|--	login_d.c中的enter_world()被调用。\n");
+
+
+	ob->delete("login_temp");
+	ob->setup();
+}
+
+void logon(object ob)
+{
+	write(" --|--	login_d.c中的logon()被调用。\n");
+	
+	write("Welcome to my New mudlib\n");
+	input_to("get_id", ob);
+}
+
+void get_id(string arg,object ob)
+{
+	write(" --|--	login_d.c中的get_id()被调用。\n");
+
+	ob->set("id", arg);
+	enter_world(ob);
+}

@@ -701,6 +701,8 @@ mapping network_stats();
 
  void mongoc_init( void );
  void mongoc_cleanup( void );
+
+ string testing( void );
 # 1 "packages/develop_spec.c"
 # 1 "<built-in>"
 # 1 "<command-line>"
